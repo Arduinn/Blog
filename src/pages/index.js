@@ -24,6 +24,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      {/* <h1>NavBar</h1> */}
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
@@ -68,7 +69,7 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="All posts" />
+export const Head = () => <Seo title="Victor Arduin" />
 
 export const pageQuery = graphql`
   query {
@@ -84,9 +85,9 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
           title
           description
+          date
         }
       }
     }
